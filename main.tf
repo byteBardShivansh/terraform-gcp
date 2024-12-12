@@ -1,8 +1,9 @@
 provider "google" {
-  project = "micro-environs-442313-i6"  # Replace with your GCP project ID
-  region  = "us-central1"      # Replace with your preferred region
+  project     = "micro-environs-442313-i6"  # Your actual Google Cloud project ID
+  region      = "us-central1"
 }
 
+# Example usage of the resolved map in your existing configuration
 resource "google_compute_instance" "vm_instance" {
   name         = "example-instance"
   machine_type = "e2-micro"          # Replace with your desired machine type
@@ -24,7 +25,8 @@ resource "google_compute_instance" "vm_instance" {
 
   # Metadata for instance
   metadata = {
-    ssh-keys = "username:ssh-rsa your-ssh-public-key"  # Replace with your public SSH key
+    ssh-keys  = "username:ssh-rsa your-ssh-public-key"  # Replace with your public SSH key
+    # additional-info = merge(var.map1, var.map2)["key3"] # Example of using the resolved map's value
   }
 
   tags = ["http-server", "https-server"]  # Add firewall rules if needed
