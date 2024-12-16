@@ -1,0 +1,7 @@
+hooks:
+  all:
+    pre:
+      - type: oidc
+        provider: gcp
+        service_account: "terrateam@PROJECT_ID.iam.gserviceaccount.com"
+        workload_identity_provider: "WORKLOAD_IDENTITY_PROVIDER"
