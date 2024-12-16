@@ -5,7 +5,7 @@ provider "google" {
 
 # Example usage of the resolved map in your existing configuration
 resource "google_compute_instance" "vm_instance" {
-  name         = "example-instance"
+  name         = "example-instance-1"
   machine_type = "e2-micro"          # Replace with your desired machine type
   zone         = "us-central1-a"    # Replace with your preferred zone
 
